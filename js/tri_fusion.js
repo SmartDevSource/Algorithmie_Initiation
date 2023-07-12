@@ -25,7 +25,6 @@ function merge(left, right){
 
   while(left.length && right.length) 
     if (left[0] < right[0]) { counter++; array.push(left.shift()); } else { counter++; array.push(right.shift())};
-
   return [...array, ...left,...right];
 }
 
