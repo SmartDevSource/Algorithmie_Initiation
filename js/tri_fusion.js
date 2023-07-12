@@ -6,7 +6,7 @@ let counter = 0;
 
 /////////////// CHARGEMENT DU FICHIER JSON ///////////////
 try{
-  dataFile = fs.readFileSync(process.argv[2], "utf-8");
+  dataFile = fs.readFileSync("../json/"+process.argv[2], "utf-8");
   lists = JSON.parse(dataFile);
 }catch{
   console.log("fichier inexistant");
