@@ -11,8 +11,6 @@ try{
 }catch{
   console.log("fichier inexistant");
 }
-/////////////// ETAT INITIAL DES LISTES RÉCUPÉRÉES ///////////////
-console.log("Etat d'origine des listes : "+lists.firstList + " et " + lists.lastList);
 
 /////////////// FONCTION DE SEPARATION EN DEUX PARTIES DE LA LISTE PASSÉE EN ARGUMENT ///////////////
 function mergeSort(list){
@@ -29,8 +27,12 @@ function merge(left, right){
 }
 
 /////////////// APPEL DE LA FONCTION MERGESORT & AFFICHAGE ///////////////
-console.log(mergeSort(lists.firstList));
-console.time("Temps d'exécution : ");
-console.log("Nombre de comparaisons effectuées : "+counter);
-console.timeEnd("Temps d'exécution : ");
-counter = 0;
+if (lists!=null)
+{
+  console.log("Etat d'origine des listes : "+lists.firstList + " et " + lists.lastList);
+  console.log(mergeSort(lists.firstList));
+  console.time("Temps d'exécution : ");
+  console.log("Nombre de comparaisons effectuées : "+counter);
+  console.timeEnd("Temps d'exécution : ");
+  counter = 0;
+}
